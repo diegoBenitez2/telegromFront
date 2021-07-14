@@ -15,7 +15,9 @@
         max-width: 464px;
         min-width: 50px;
         border:0;
-        border-radius: 14px;
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+        border-top-right-radius: 14px;
         background: rgb(238,254,223);
         position: relative;
         &:before{
@@ -24,11 +26,11 @@
                     width: 0;
                     height: 0;
                     left: auto;
-                    right: 0px;
-                    bottom: -11px;
-                    border-top: 10px solid transparent;
-                    border-right: 20px solid rgb(238,254,223);
-                    border-bottom: 13px solid transparent;
+                    right: -16px;
+                    bottom: 0px;
+                    border-top: 14px solid transparent;
+                    border-left: 20px solid rgb(238,254,223);
+                    border-bottom: 0px solid transparent;
         }
         &__text{
             max-width: 420px;

@@ -36,7 +36,7 @@ export default {
 
 <style lang="scss" scoped>
     .chat{
-        width: calc(100% - 342px);
+        width: 100%;
         height: 100vh;
         &__container{
             width: 100%;
@@ -69,7 +69,7 @@ export default {
                 }
             margin: 0 auto;
             .board{
-                overflow: auto;
+                overflow: hidden;
                 height: calc(100vh - 154px);
                 text-align: center;
                 &__date{
@@ -100,7 +100,9 @@ export default {
                     align-items: center;
                     padding: 15px;
                     background: white;
-                    border-radius: 10px;
+                    border-top-left-radius: 15px;
+                    border-bottom-left-radius: 15px;
+                    border-top-right-radius: 15px;
                     position: relative;
                  &:before{
                     content: ' ';
@@ -108,11 +110,11 @@ export default {
                     width: 0;
                     height: 0;
                     left: auto;
-                    right: 0px;
-                    bottom: -10px;
-                    border-top: 13px solid transparent;
-                    border-right: 26px solid white;
-                    border-bottom: 13px solid transparent;
+                    right:-13px;
+                    bottom: -0px;
+                   border-top: 15px solid transparent;
+                    border-left: 15px solid white;
+                    border-bottom: 0px solid transparent;
                 }
                     .emotics, .attachment{
                         font-size: 20px;

@@ -7,19 +7,19 @@
         </section>
         <section class="userList__list">
             <ul class="list__container">
-                <CardUserList />
+                <CardUser />
             </ul>
         </section>
     </article>
 </template>
 
 <script>
-import CardUserList from '../components/CardUserList.vue';
+import CardUser from '../components/CardUser.vue';
 
 export default {
     name: 'UsersActive',
     components: {
-        CardUserList,
+        CardUser,
     },
 };
 

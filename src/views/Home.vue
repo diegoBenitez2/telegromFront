@@ -2,11 +2,13 @@
     <div class="home">
         <UsersActive />
         <Chat />
+        <SearchMessage />
     </div>
 </template>
 
 <script>
 import UsersActive from './UsersActive.vue';
+import SearchMessage from './SearchMessage.vue';
 import Chat from './Chat.vue';
 
 export default {
@@ -14,6 +16,7 @@ export default {
     components: {
         UsersActive,
         Chat,
+        SearchMessage,
     },
 };
 </script>

@@ -1,10 +1,10 @@
 <template>
     <section class="header">
         <div class="info">
-            <!-- <figure class="header__avatar_container">
-                <img src="" alt="img_info" class="header__avatar">
+            <!-- <figure class="avatar_container">
+                <img src="" alt="img_info" class="avatar">
             </figure> -->
-            <div class="avatar_background">D</div>
+            <div class="avatar__no-images no_images">D</div>
             <div class="infoChat">
                 <h4 class="infoChat_title title-text">Compartir</h4>
                 <p class="infoChat__status">
@@ -31,6 +31,7 @@
     box-shadow: 0px 4px 4px -2px  rgba(0,0,0,.1);
     border:0;
     border-left: 1px solid rgb(193,195,197);
+    border-right: 1px solid rgb(193,195,197);
     .info{
         min-width:20%;
         display: flex;
@@ -43,17 +44,10 @@
                 margin:0;
                 border-radius: 50%;
             }
-            &_background{
-                display:grid;
-                place-items: center;
+            &__no-images{
                 width:40px;
                 height: 40px;
                 margin:0;
-                border-radius: 50%;
-                color: white;
-                text-transform: capitalize;
-                font-weight: bold;
-                text-align: center;
                 background: linear-gradient(120deg, #fff, rgb(0,123,255));
             }
         }

@@ -1,8 +1,9 @@
 <template>
     <li class="card">
-        <figure class="avatar__container">
+        <!-- <figure class="avatar__container">
             <img src="" alt="" class="avatar__img" />
-        </figure>
+        </figure> -->
+        <div class="card__no-image no_images">d</div>
         <div class="info">
             <div class="info__containerTitle">
                 <h4 class="info__title title-text three-points">Compartir</h4>
@@ -27,8 +28,13 @@
             margin-left: 5px;
             margin-right: 3px;
             cursor: pointer;
+            &__no-image{
+                width: 54px;
+                height: 54px;
+                background: linear-gradient(120deg, #fff, rgb(0,123,255));
+            }
             &:hover{
-                border-radius: 20px;
+                border-radius: 15px;
                 background: rgba(244,244,245,.7);
             }
         .avatar{
