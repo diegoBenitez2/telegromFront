@@ -1,0 +1,39 @@
+.input-search{
+    .el-input__inner{
+        background: #f4f4f5;
+        border: 0;
+        padding: 20px 35px;
+        border-radius: 20px;
+        height: 20px;
+        &::placeholder{
+            color:rgba(112,117,121,.5);
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: capitalize;
+            
+        }
+        &:focus{
+            background: white;
+            border: 2px solid rgb(80,162,233);
+        }
+    }
+    .el-input__prefix{
+        font-weight: 600;
+        font-size: 16px;
+        padding-left: 5px;
+    }
+}
+.input-message{
+    .el-input__inner{
+        border:0;
+        background: transparent;
+        margin: 0;
+        height: 25px;
+        &::placeholder{
+            color:#c1c3c5;
+            font-weight:600;
+            font-size: 16px;
+            text-transform: capitalize;
+        }
+    }
+}
