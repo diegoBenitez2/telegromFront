@@ -2,7 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import './library';
-import './assets/sass/index.scss';
+import './assets/icons';
 
 Vue.config.productionTip = false;
 

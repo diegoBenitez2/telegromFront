@@ -11,7 +11,7 @@
                 </section>
                 <section class="inputMessage">
                     <div class="inputMessage__container">
-                        <i class="mdi mdi-face-smallmotics" />
+                        <i class="mdi mdi-emoticon-happy-outline emotics" />
                         <el-input placeholder="message" class="input-message chat_input"/>
                         <i class="mdi mdi-attachment attachment" />
                     </div>
@@ -80,7 +80,7 @@ export default {
                     background: #738860;
                     color: white;
                     font-weight: 600;
-                    font-size: 15px;
+                    font-size: 14px;
                     text-transform: capitalize;
                 }
                 &__list{
@@ -98,7 +98,7 @@ export default {
                 &__container{
                     display: flex;
                     align-items: center;
-                    padding: 15px;
+                    padding: 10px;
                     background: white;
                     border-top-left-radius: 15px;
                     border-bottom-left-radius: 15px;
@@ -117,8 +117,16 @@ export default {
                     border-bottom: 0px solid transparent;
                 }
                     .emotics, .attachment{
-                        font-size: 20px;
-                        color:#c1c3c5;
+                        font-size: 23px;
+                        color:$grayGeneral;
+                        cursor: pointer;
+                        &:hover{
+                            color:$blueGeneral;
+                        }
+                    }
+                    .attachment{
+                        font-size: 25px;
+                        transform: rotate(-42deg);
                     }
                 }
             }

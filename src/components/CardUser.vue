@@ -1,5 +1,5 @@
 <template>
-    <li class="card">
+    <li :class="['card', { 'active':active, 'hover':!active }]" @click="crearChat">
         <!-- <figure class="avatar__container">
             <img src="" alt="" class="avatar__img" />
         </figure> -->
@@ -18,6 +18,20 @@
     </li>
 </template>
 
+<script>
+export default {
+    data() {
+        return {
+            active: false,
+        };
+    },
+    methods: {
+        crearChat() {
+            this.active = true;
+        },
+    },
+};
+</script>
 <style lang="scss" scoped>
     .card{
             display: flex;
@@ -27,15 +41,12 @@
             margin:0;
             margin-left: 5px;
             margin-right: 3px;
+            border-radius: 15px;
             cursor: pointer;
             &__no-image{
                 width: 54px;
                 height: 54px;
                 background: linear-gradient(120deg, #fff, rgb(0,123,255));
-            }
-            &:hover{
-                border-radius: 15px;
-                background: rgba(244,244,245,.7);
             }
         .avatar{
             &__container{
@@ -61,6 +72,7 @@
             &__title{
                 width: 170px;
                 margin:4px 0;
+                font-size: 13px;
             }
             &__check{
                 font-size: 10px;
@@ -76,7 +88,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                font-size:16px;
+                font-size:14px;
                 margin:0;
                 &_ultimedMessage{
                     width:225px;
@@ -90,7 +102,7 @@
                     border-radius: 16px ;
                     padding: 5px 6px;
                     color: #fff;
-                    font-size:15px;
+                    font-size:14px;
                     font-weight: 600;
                     text-align: center;
                 }
@@ -101,5 +113,26 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+    }
+    .active{
+        background: $blueGeneral;
+        p,h4{
+            color: #fff;
+        }
+        .info__time{
+            color: #ffffff;
+        }
+        .info__user{
+            &_ultimedMessage{
+                color:#ffffff;
+            }
+            &_countMessage{
+                color: $blueGeneral;
+                background: #ffffff;
+            }
+        }
+    }
+    .hover:hover{
+        background: rgba(244,244,245,.7);
     }
 </style>

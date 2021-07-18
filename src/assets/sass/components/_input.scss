@@ -1,20 +1,22 @@
+.el-input--prefix .el-input__inner{
+    padding-left: 37px !important;
+}
 .input-search{
     .el-input__inner{
-        background: #f4f4f5;
+        background: $grayLight;
         border: 0;
         padding: 20px 35px;
         border-radius: 20px;
         height: 20px;
         &::placeholder{
             color:rgba(112,117,121,.5);
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 14px;
             text-transform: capitalize;
             
         }
         &:focus{
             background: white;
-            border: 2px solid rgb(80,162,233);
+            border: 2px solid $blueGeneral;
         }
     }
     .el-input__prefix{
@@ -31,8 +33,7 @@
         height: 25px;
         &::placeholder{
             color:#c1c3c5;
-            font-weight:600;
-            font-size: 16px;
+            font-size: 14px;
             text-transform: capitalize;
         }
     }

@@ -1,0 +1,14 @@
+
+// $height = font-size * number lines to used + 1px 
+@mixin fewLines_threePoints($lines,$height){
+    display: block;
+    display: -webkit-box;
+    height: $height;
+    min-width: 100%;
+    line-height: 1;
+    margin: 0 auto;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

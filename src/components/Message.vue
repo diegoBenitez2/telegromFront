@@ -35,10 +35,11 @@
         &__text{
             max-width: 420px;
             text-transform: capitalize;
-            margin:0;
-            font-size:15px;
             text-align: left;
+            margin:0;
             color: black;
+            font-size:14px;
+            font-weight:500;
         }
         &__status{
             display: flex;

@@ -1,10 +1,10 @@
 <template>
     <article class="search__message">
         <section class="options">
-            <i class="mdi mdi-close close"/>
+            <i class="mdi mdi-close close shadow-hover"/>
             <el-input prefix-icon="el-icon-search"
             placeholder="search" class="input-search inputSearch__message"/>
-            <i class="mdi mdi-calendar calendar" />
+            <i class="mdi mdi-calendar-blank-outline calendar shadow-hover" />
         </section>
         <div class="found">
             <p class="found__text">1 message found</p>
@@ -30,20 +30,22 @@ export default {
 
 <style lang="scss" scoped>
     .search__message{
-        width: 600px;
+        width: 0px;
         height: 100vh;
         border:0;
         overflow:hidden;
+        transition: .3s all ease;
         .options{
             display: flex;
             align-items: center;
-            padding: 5px 25px;
-            .close .calendar{
-                font-size: 18px;
-                color:rgb(112,117,121);
+            padding: 5px 10px;
+            .close, .calendar{
+                font-size: 22px;
+                color:$grayGeneral;
+                cursor: pointer;
             }
             .inputSearch__message{
-                margin: 0 25px;
+                margin: 0 15px;
             }
         }
         .found{
@@ -51,10 +53,10 @@ export default {
             border:0;
             &__text{
                 margin:0;
-                font-size: 16;
+                font-size: 14px;
                 font-weight: 600;
                 text-align: left;
-                color:rgb(112,117,121);
+                color:$grayGeneral;
             }
         }
         .message__list{
@@ -85,5 +87,8 @@ export default {
                 }
             }
         }
+    }
+    .active{
+        width: 680px;
     }
 </style>

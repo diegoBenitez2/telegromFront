@@ -1,5 +1,6 @@
 import Vue from 'vue';
-import { Popover, Input } from 'element-ui';
+import { Popover, Input, Switch } from 'element-ui';
 
 Vue.use(Popover);
 Vue.use(Input);
+Vue.use(Switch);
