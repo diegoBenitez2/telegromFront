@@ -36,10 +36,9 @@ export default {
 
 <style lang="scss" scoped>
     .chat{
-        width: 100%;
+        width: calc(100% - 420px);
         height: 100vh;
         &__container{
-            width: 100%;
             border: 0;
             background:linear-gradient(120deg,rgb(214,210,153),
             rgb(141,169,129) 30%,rgb(214,210,153));

@@ -1,7 +1,7 @@
 <template>
     <article :class="['search__message', {'active': modal}]">
         <section class="options">
-            <i class="mdi mdi-close close shadow-hover" @click="toggleModal"/>
+            <i class="mdi mdi-arrow-left close shadow-hover" @click="toggleModal"/>
             <el-input prefix-icon="el-icon-search"
             placeholder="search" class="input-search inputSearch__message"/>
             <i class="mdi mdi-calendar-blank-outline calendar shadow-hover" />
@@ -51,7 +51,7 @@ export default {
             align-items: center;
             padding: 5px 10px;
             .close, .calendar{
-                font-size: 22px;
+                font-size: 1.7em;
                 color:$grayGeneral;
                 cursor: pointer;
             }
@@ -64,7 +64,7 @@ export default {
             border:0;
             &__text{
                 margin:0;
-                font-size: 14px;
+                font-size: 1em;
                 font-weight: 600;
                 text-align: left;
                 color:$grayGeneral;
@@ -100,6 +100,6 @@ export default {
         }
     }
     .active{
-        width: 680px;
+        width: 650px;
     }
 </style>

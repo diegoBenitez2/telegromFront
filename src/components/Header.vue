@@ -6,7 +6,7 @@
             </figure> -->
             <div class="avatar__no-images no_images">D</div>
             <div class="infoChat">
-                <h4 class="infoChat_title title-text">Compartir</h4>
+                <h4 class="infoChat_title">Compartir</h4>
                 <p class="infoChat__status">
                     <span class="infoChat__status_members">last seen</span>,
                     <span class="infoChat__status_online">127 online</span>
@@ -15,18 +15,36 @@
         </div>
         <div class="header__options">
             <i class="mdi mdi-magnify shadow-hover"  @click="toggleSearch"/>
-            <el-popover placement="bottom" trigger="click" width="200">
+            <el-popover placement="bottom" trigger="click" width="230" class="popover-dots">
                 <ul class="dots__container">
+                    <li class="dots__items text-gray">
+                        <i class="mdi mdi-bell-off-outline dots__icons" />
+                        <span class="dots__text">
+                            Mute
+                        </span>
+                    </li>
                     <li class="dots__items">
                         <i class="mdi mdi-check-circle-outline dots__icons" />
                         <span class="dots__text">
                             Select Messages
                         </span>
                     </li>
+                     <li class="dots__items">
+                        <i class="mdi mdi-share-outline dots__icons" />
+                        <span class="dots__text">
+                            Share contact
+                        </span>
+                    </li>
+                     <li class="dots__items">
+                        <i class="mdi mdi-lock-outline dots__icons " />
+                        <span class="dots__text">
+                            Block user
+                        </span>
+                    </li>
                     <li class="dots__items">
-                        <i class="mdi mdi-delete-outline dots__icons text-danger" />
-                        <span class="dots__text text-danger">
-                            Delete
+                        <i class="mdi mdi-delete-outline dots__icons dots__icons--danger" />
+                        <span class="dots__text dots__text--danger">
+                            Delete Chat
                         </span>
                     </li>
                 </ul>
@@ -75,7 +93,7 @@ export default {
                 width:40px;
                 height: 40px;
                 margin:0;
-                background: linear-gradient(120deg, #fff, rgb(0,123,255));
+                background: linear-gradient(120deg, rgb(207, 221, 255) 1%, rgb(0,123,255) 99%);
             }
         }
         .infoChat{
@@ -85,11 +103,13 @@ export default {
             &_title{
                 margin:3px 0 0;
                 font-size: 16px;
+                margin-bottom: 4px;
+                font-weight: 500;
             }
             &__status{
                 color:gray;
-                font-size:13px;
-                font-weight:500;
+                font-size:.85em;
+                font-weight:400;
                 margin:0;
             }
         }
@@ -98,7 +118,7 @@ export default {
         display: flex;
         align-items: center;
         i{
-            font-size:23px;
+            font-size:1.6em;
             color:$grayGeneral;
             cursor: pointer;
         }
@@ -121,14 +141,21 @@ export default {
         }
     }
     &__icons{
-        font-size:22px;
+        font-size:1.8em;
         margin-right:10px;
+        color: $grayGeneral;
+        &--danger{
+            color: $danger;
+        }
     }
     &__text{
         text-transform: capitalize;
-        font-size:14px;
+        font-size:1.1em;
         margin-left:10px;
-        font-weight: 600;
+        font-weight: 400;
+        &--danger {
+            color: $danger;
+        }
     }
 }
 </style>

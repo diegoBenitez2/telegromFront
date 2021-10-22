@@ -1,20 +1,63 @@
 <template>
     <article class="userList">
         <section class="userList__options">
-            <el-popover placement="bottom"  trigger="click" width="200">
+            <el-popover placement="bottom"  trigger="click" width="280">
                 <ul class="menu__container">
                     <li class="menu__items">
-                        <i class="mdi mdi-archive-arrow-down-outline menu__icon " />
+                        <i class="mdi mdi-bookmark-outline menu__icon " />
                         <span class="menu__text">
-                            Archived Chats
+                            Saved Messages
+                        </span>
+                    </li>
+                     <li class="menu__items">
+                        <i class="mdi mdi-account-outline menu__icon " />
+                        <span class="menu__text">
+                            Contacts
+                        </span>
+                    </li>
+                     <li class="menu__items">
+                        <i class="mdi mdi-cog-outline menu__icon " />
+                        <span class="menu__text">
+                            Settings
                         </span>
                     </li>
                     <li class="menu__items">
-                        <i class="mdi mdi-weather-night menu__icon" />
+                        <i class="mdi mdi-weather-night menu__icon icon-dark-mode" />
                         <span class="menu__text">
-                            Night Mode
+                            Dark Mode
                         </span>
                         <el-switch v-model="menu.night" class="menu__switch"/>
+                    </li>
+                    <li class="menu__items">
+                        <i class="mdi mdi-weather-night menu__icon icon-dark-mode" />
+                        <span class="menu__text">
+                            Animations
+                        </span>
+                        <el-switch v-model="menu.night" class="menu__switch"/>
+                    </li>
+                     <li class="menu__items">
+                        <i class="mdi mdi-bookmark-outline menu__icon " />
+                        <span class="menu__text">
+                            Telegram Features
+                        </span>
+                    </li>
+                    <li class="menu__items">
+                        <i class="mdi mdi-bookmark-outline menu__icon " />
+                        <span class="menu__text">
+                            Repost Bugs
+                        </span>
+                    </li>
+                    <li class="menu__items">
+                        <i class="mdi mdi-bookmark-outline menu__icon " />
+                        <span class="menu__text">
+                            Switch to Z version
+                        </span>
+                    </li>
+                    <li class="menu__items">
+                        <i class="mdi mdi-bookmark-outline menu__icon " />
+                        <span class="menu__text">
+                            Switch to Old Version
+                        </span>
                     </li>
                 </ul>
                 <div class="references">
@@ -29,6 +72,9 @@
         </section>
         <section class="userList__list">
             <ul class="list__container">
+                <CardUser />
+                <CardUser />
+                <CardUser />
                 <CardUser />
             </ul>
         </section>
@@ -56,17 +102,17 @@ export default {
 </script>
 <style lang="scss" scoped>
 .userList{
-    min-width: 342px;
+    min-width: 420px;
     height: 100vh;
     &__options{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 5px 20px 15px 10px;
+        padding: 7px 20px 7px 10px;
     }
     .options{
         &__menu{
-            font-size:22px;
+            font-size:24px;
             margin-right: 10px;
             cursor: pointer;
             color:$grayGeneral;
@@ -99,15 +145,15 @@ export default {
             }
         }
         &__icon{
-            font-size:22px;
+            font-size:2.1em;
             color:$grayGeneral;
             margin-right: 10px;
         }
         &__text{
             margin-left:10px;
-            font-size:13px;
+            font-size:1.1em;
             color: $blackTitle;
-            font-weight:600;
+            font-weight:400;
             text-transform: capitalize;
         }
         &__switch{
@@ -126,5 +172,8 @@ export default {
             color:$grayGeneral;
             text-transform: capitalize;
         }
+    }
+    .icon-dark-mode {
+        transform: rotate(270deg);
     }
 </style>
