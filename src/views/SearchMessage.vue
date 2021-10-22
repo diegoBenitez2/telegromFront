@@ -1,7 +1,7 @@
 <template>
-    <article class="search__message">
+    <article :class="['search__message', {'active': modal}]">
         <section class="options">
-            <i class="mdi mdi-close close shadow-hover"/>
+            <i class="mdi mdi-close close shadow-hover" @click="toggleModal"/>
             <el-input prefix-icon="el-icon-search"
             placeholder="search" class="input-search inputSearch__message"/>
             <i class="mdi mdi-calendar-blank-outline calendar shadow-hover" />
@@ -18,12 +18,23 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import CardUser from '../components/CardUser.vue';
 
 export default {
     name: 'SearchMessage',
     components: {
         CardUser,
+    },
+    computed: {
+        ...mapGetters({
+            modal: 'SearchMessage/getModals',
+        }),
+    },
+    methods: {
+        toggleModal() {
+            this.$store.commit('SearchMessage/TOGGLE_MODALS');
+        },
     },
 };
 </script>

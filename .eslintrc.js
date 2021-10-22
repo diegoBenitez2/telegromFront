@@ -17,7 +17,7 @@ module.exports = {
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         semi: ['error', 'always'],
         'no-underscore-dangle': 0,
-        'arrow-body-style': ['error', 'always'],
+        'arrow-body-style': ['error', 'as-needed'],
         camelcase: ['error', { properties: 'always' }],
         'no-shadow': ['error', { builtinGlobals: true, hoist: 'functions', allow: [] }],
         'consistent-return': 0,
@@ -29,5 +29,6 @@ module.exports = {
             'error',
             'unix',
         ],
+        'no-param-reassign': ['error', { props: false }],
     },
 };

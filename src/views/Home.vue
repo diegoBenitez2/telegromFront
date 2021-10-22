@@ -8,15 +8,15 @@
 
 <script>
 import UsersActive from './UsersActive.vue';
-import SearchMessage from './SearchMessage.vue';
+import SearchMessage from './SearchMessage';
 import Chat from './Chat.vue';
 
 export default {
     name: 'Home',
     components: {
         UsersActive,
-        Chat,
         SearchMessage,
+        Chat,
     },
 };
 </script>

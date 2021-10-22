@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="header__options">
-            <i class="mdi mdi-magnify shadow-hover" />
+            <i class="mdi mdi-magnify shadow-hover"  @click="toggleSearch"/>
             <el-popover placement="bottom" trigger="click" width="200">
                 <ul class="dots__container">
                     <li class="dots__items">
@@ -35,6 +35,16 @@
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    methods: {
+        toggleSearch() {
+            this.$store.commit('SearchMessage/TOGGLE_MODALS');
+        },
+    },
+};
+</script>
 
 <style lang="scss" scoped>
 .header{

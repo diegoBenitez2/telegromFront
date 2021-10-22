@@ -1,5 +1,5 @@
 <template>
-    <li :class="['card', { 'active':active, 'hover':!active }]" @click="crearChat">
+    <li :class="['card', { 'activeCard':active, 'hover':!active }]" @click="crearChat">
         <!-- <figure class="avatar__container">
             <img src="" alt="" class="avatar__img" />
         </figure> -->
@@ -114,7 +114,7 @@ export default {
         text-overflow: ellipsis;
         overflow: hidden;
     }
-    .active{
+    .activeCard{
         background: $blueGeneral;
         p,h4{
             color: #fff;
